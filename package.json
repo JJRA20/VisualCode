@@ -3,13 +3,24 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "record": "playwright codegen",
+    "test": "playwright test",
+    "report:allure:generate": "allure generate ./allure-results --clean -o ./allure-report",
+    "report:allure:open": "allure open ./allure-report",
+    "report:allure": "npm run report:allure:generate && npm run report:allure:open"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
     "@playwright/test": "^1.62.1",
-    "@types/node": "^26.2.0"
+    "@types/node": "^26.2.0",
+    "allure-commandline": "^2.43.0",
+    "allure-js-commons": "^3.11.0",
+    "allure-playwright": "^3.11.0",
+    "newman": "^6.2.2",
+    "typescript": "^7.0.2"
   }
 }
